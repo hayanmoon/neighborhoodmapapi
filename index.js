@@ -8,6 +8,7 @@ const app = express()
 
 app.use(cors())
 
+//fetch details from yelp api
 app.get('/location/:id', (req, res) => {
   const url = `${config.url}/${req.params.id}`
   fetch(url, { headers: { Authorization: `Bearer ${config.api}` } })
